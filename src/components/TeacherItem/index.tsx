@@ -3,7 +3,6 @@ import React from 'react'
 import './styles.css'
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
 import api from '../../services/api'
-import TeacherForm from '../../pages/TeacherForm'
 
 export interface Teacher {
   id: number;
@@ -43,6 +42,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
         </p>
         <a 
           target="_blank"
+          rel="noopener noreferrer"
           onClick={createNewConnection}
           href={`http://wa.me/${teacher.whatsapp}`}>
           <img src={whatsappIcon} alt={teacher.whatsapp}/>
